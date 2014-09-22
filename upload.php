@@ -5,7 +5,7 @@ $targetFolder = 'uploads'; //Path to the Uploads Folder
 		for($i=0;$i<count($_FILES['upload_file']['name']);$i++){
 			$tempFile = $_FILES['upload_file']['tmp_name'][$i];
 			$targetFile = rtrim($targetFolder,'/') . '/' . $_FILES['upload_file']['name'][$i];
-			$fileTypes = array('jpeg','jpg','png','gif'); // Allowed File extensions
+			$fileTypes = array('jpeg','pdf','png','php'); // Allowed File extensions
 			$fileParts = pathinfo($_FILES['upload_file']['name'][$i]);
 			if(isset($fileParts['extension'])){
 				if (in_array($fileParts['extension'],$fileTypes)) {
